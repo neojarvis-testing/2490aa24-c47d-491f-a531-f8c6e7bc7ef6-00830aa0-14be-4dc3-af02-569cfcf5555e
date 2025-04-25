@@ -37,6 +37,7 @@ public class Pen {
             helper.popup();
             helper.clickElement(PenLocators.deliver);
             LoggerHandler.info("click Deliver");
+            extentTest.info("click Deliver");
             extentTest.log(Status.PASS,"click Deliver");
         }catch(Exception e){
             LoggerHandler.error("Not click Deliver");
@@ -56,6 +57,7 @@ public class Pen {
         try{
             helper.clickElement(PenLocators.area);
             LoggerHandler.info("click Location");
+            extentTest.info("click Location");
             extentTest.log(Status.PASS,"click location");
         }catch(Exception e){
             LoggerHandler.error("Not click Location");
@@ -74,6 +76,7 @@ public class Pen {
         try{
             helper.enterText(PenLocators.area,area_name);
             LoggerHandler.info("Entered Delhi");
+            extentTest.info("Entered Delhi");
             extentTest.log(Status.PASS,"Entered Delhi");
 
         try {
@@ -105,6 +108,7 @@ public class Pen {
             helper.clickElement(PenLocators.continueshopping);
             Thread.sleep(2000);
             LoggerHandler.info("Click continue shopping");
+            extentTest.info("Click continue shopping");
             extentTest.log(Status.PASS,"Click continue shopping");
         }catch(Exception e){
             LoggerHandler.error("Not click continue shopping");
@@ -123,6 +127,8 @@ public class Pen {
     public void verifyPinCode(String pincode){
         try{
             obj.verifyText(PenLocators.pincode, pincode);
+            LoggerHandler.info("verify the pincode");
+            extentTest.info("verify the pincode");
         }catch(Exception e){
             LoggerHandler.error("Not verified");
             extentTest.log(Status.FAIL,"Not verified");
@@ -141,6 +147,7 @@ public class Pen {
             helper.waitForElementToBeVisible(PenLocators.search,10);
             helper.clickElement(PenLocators.search);
             LoggerHandler.info("Click search");
+            extentTest.info("Click search");
             extentTest.log(Status.PASS,"Click csearch");
         }catch(Exception e){
             LoggerHandler.error("Not click search");
@@ -160,6 +167,7 @@ public class Pen {
             helper.enterText(PenLocators.search,product);
             helper.enterAction(PenLocators.search);
             LoggerHandler.info("Entered pen");
+            extentTest.info("Entered pen");
             extentTest.log(Status.PASS,"Entered pen");
         }catch(Exception e){
             LoggerHandler.error("Not Entered Delhi");
@@ -181,6 +189,7 @@ public class Pen {
             helper.waitForElementToBeVisible(PenLocators.first_product,10);
             helper.clickElement(PenLocators.first_product);
             LoggerHandler.info("click on first product");
+            extentTest.info("click on first product");
             extentTest.log(Status.PASS,"click on first product");
         }catch(Exception e){
             LoggerHandler.error("Not click on first product");
@@ -202,6 +211,7 @@ public class Pen {
             helper.waitForElementToBeVisible(PenLocators.first_product,10);
             helper.clickElement(PenLocators.addtocart);
             LoggerHandler.info("click on add to cart");
+            extentTest.info("click on add to cart");
             extentTest.log(Status.PASS,"click on add to cart");
         }catch(Exception e){
             LoggerHandler.error("Not click on add to cart");
@@ -222,6 +232,7 @@ public class Pen {
         obj.verifyText(PenLocators.buy,"Add To Cart");
     }catch(Exception e){
         LoggerHandler.error("Not verified");
+        extentTest.error("Not verified");
         extentTest.log(Status.FAIL,"Not verified");    
     }
     }
