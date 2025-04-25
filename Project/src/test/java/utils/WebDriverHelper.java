@@ -14,12 +14,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
  
 import org.openqa.selenium.support.ui.WebDriverWait;
- 
 import com.aventstack.extentreports.Status;
- 
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
+import org.openqa.selenium.support.ui.Select;
 public class WebDriverHelper {
     private WebDriver driver;
     public WebDriverHelper(WebDriver driver){
@@ -146,6 +143,25 @@ public class WebDriverHelper {
         } catch (Exception e) {
             LoggerHandler.error("Failed to navigate to home");
         }
+    } 
+    public void clickNoThanks() {
+        try {
+            clickElement(By.xpath("//button[text()='No, Thanks']"));
+            LoggerHandler.info("Clicked 'No Thanks'");
+        } catch (Exception e) {
+            LoggerHandler.error("Failed to click 'No Thanks'");
+        }
+    }
+    public void popup() {
+		WebElement webelement = driver.findElement(By.xpath("//button[text()='No, Thanks']"));
+		webelement.click();
+	}
+public void waitForAction() {
+    	try {
+			Thread.sleep(3000);
+		} catch (Exception e) {
+			LoggerHandler.info("failed waitForAction");
+		}
     }
  
     public boolean isElementPresent(By locator) {
