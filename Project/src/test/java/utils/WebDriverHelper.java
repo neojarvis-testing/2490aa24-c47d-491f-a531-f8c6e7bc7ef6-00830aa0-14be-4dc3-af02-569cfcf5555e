@@ -143,7 +143,6 @@ public class WebDriverHelper {
             LoggerHandler.error("Failed to navigate to home");
         }
     }
- 
     public void popup() {
 		WebElement webelement = driver.findElement(By.xpath("//button[text()='No, Thanks']"));
 		webelement.click();
