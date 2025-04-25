@@ -14,7 +14,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
  
 import org.openqa.selenium.support.ui.WebDriverWait;
-  
+import com.aventstack.extentreports.Status;
+
 import org.openqa.selenium.support.ui.Select;
 public class WebDriverHelper {
     private WebDriver driver;
@@ -90,7 +91,7 @@ public class WebDriverHelper {
             js.executeScript("arguments[0].scrollIntoView(True);",webElement);
         }
         catch(Exception e){
-            e.printStackTrace();
+            LoggerHandler.error("Failed to scroll");
         }
     }
     public List<WebElement> getElementsByXPath(String xpath) {
@@ -179,5 +180,18 @@ public void waitForAction() {
             LoggerHandler.error("Error verifying URL: Expected - " + expectedUrl);
             return false;
         }
+    }
+
+    public void popup() {
+		WebElement webelement = driver.findElement(By.xpath("//button[text()='No, Thanks']"));
+		webelement.click();
+	}
+
+    public void waitForAction() {
+    	try {
+			Thread.sleep(3000);
+		} catch (Exception e) {
+			LoggerHandler.info("failed waitForAction");
+		}
     }
 }
