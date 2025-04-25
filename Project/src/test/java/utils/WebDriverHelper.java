@@ -142,6 +142,14 @@ public class WebDriverHelper {
         } catch (Exception e) {
             LoggerHandler.error("Failed to navigate to home");
         }
+    } 
+    public void clickNoThanks() {
+        try {
+            clickElement(By.xpath("//button[text()='No, Thanks']"));
+            LoggerHandler.info("Clicked 'No Thanks'");
+        } catch (Exception e) {
+            LoggerHandler.error("Failed to click 'No Thanks'");
+        }
     }
     public void popup() {
 		WebElement webelement = driver.findElement(By.xpath("//button[text()='No, Thanks']"));
