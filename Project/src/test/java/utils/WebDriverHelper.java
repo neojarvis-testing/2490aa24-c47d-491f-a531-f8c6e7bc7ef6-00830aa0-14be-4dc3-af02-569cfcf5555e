@@ -150,14 +150,19 @@ public class WebDriverHelper {
         }
     }
  
-    // public void clickNoThanks() {
-    //     try {
-    //         clickElement(LoginLocators.nothanks);
-    //         LoggerHandler.info("Clicked 'No Thanks'");
-    //     } catch (Exception e) {
-    //         LoggerHandler.error("Failed to click 'No Thanks'");
-    //     }
-    // }
+    public void popup() {
+		WebElement webelement = driver.findElement(By.xpath("//button[text()='No, Thanks']"));
+		webelement.click();
+	}
+ 
+public void waitForAction() {
+    	try {
+			Thread.sleep(3000);
+		} catch (Exception e) {
+			LoggerHandler.info("failed waitForAction");
+		}
+    }
+ 
  
     public boolean isElementPresent(By locator) {
         try {
