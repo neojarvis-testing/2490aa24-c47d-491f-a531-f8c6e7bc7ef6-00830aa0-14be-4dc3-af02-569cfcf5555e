@@ -147,6 +147,13 @@ public class WebDriverHelper {
 		WebElement webelement = driver.findElement(By.xpath("//button[text()='No, Thanks']"));
 		webelement.click();
 	}
+public void waitForAction() {
+    	try {
+			Thread.sleep(3000);
+		} catch (Exception e) {
+			LoggerHandler.info("failed waitForAction");
+		}
+    }
  
     public boolean isElementPresent(By locator) {
         try {
