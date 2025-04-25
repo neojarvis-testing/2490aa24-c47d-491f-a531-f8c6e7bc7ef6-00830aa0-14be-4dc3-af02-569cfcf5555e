@@ -182,16 +182,4 @@ public void waitForAction() {
         }
     }
 
-    public void popup() {
-		WebElement webelement = driver.findElement(By.xpath("//button[text()='No, Thanks']"));
-		webelement.click();
-	}
-
-    public void waitForAction() {
-    	try {
-			Thread.sleep(3000);
-		} catch (Exception e) {
-			LoggerHandler.info("failed waitForAction");
-		}
-    }
 }

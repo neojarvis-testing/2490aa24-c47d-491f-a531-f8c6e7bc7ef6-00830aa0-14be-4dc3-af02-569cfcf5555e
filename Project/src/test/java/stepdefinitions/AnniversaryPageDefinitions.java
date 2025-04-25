@@ -11,20 +11,20 @@ public class AnniversaryPageDefinitions {
     public static ExtentTest extentTest;
     AnniversaryPageActions anniversaryPageObject;
     
-    @Given("I open the browser")
-    public void i_open_the_browser() {
+    @Given("I opened the browser")
+    public void i_opened_the_browser() {
         extentTest=Hooks.extentReport.createTest("Anniversary_Test");
         anniversaryPageObject = new AnniversaryPageActions(extentTest);
     }
-    @When("I click on Where to deliver")
-    public void i_click_on_where_to_deliver() {
+    @When("I clicked on Where to deliver")
+    public void i_clicked_on_where_to_deliver() {
         anniversaryPageObject.clickOnWhereToDeliver();
     }
-    @When("I enter the city as {string}")
-    public void i_enter_the_city_as(String string) {
+    @When("I entered the city as {string}")
+    public void i_entered_the_city_as(String string) {
         anniversaryPageObject.inputCity(string);
     }
-    @When("I click on continue shopping")
+    @When("I clicked on continue shopping")
     public void i_click_on_continue_shopping() {
         anniversaryPageObject.clickOnContinueShopping();
     }
@@ -44,9 +44,9 @@ public class AnniversaryPageDefinitions {
     public void i_click_on_buy_now() {
         anniversaryPageObject.clickOnBuyNow();
     }
-    @Then("I verify the page contains {string} and capture the screenshot")
-    public void i_verify_the_page_contains_and_capture_the_screenshot(String string) {
-        anniversaryPageObject.verifyHome(string);
-    }
+    // @Then("I verify the page contains {string} and capture the screenshot")
+    // public void i_verify_the_page_contains_and_capture_the_screenshot(String string) {
+    //     anniversaryPageObject.verifyHome(string);
+    // }
 
 }

@@ -194,7 +194,7 @@ public class Cake {
             extentTest.log(Status.PASS, "Entered Cake");
         } catch (Exception e) {
             LoggerHandler.error("Not Entered Delhi");
-            xtentTest.log(Status.INFO,"Not Entered Cake");
+            extentTest.log(Status.INFO,"Not Entered Cake");
             extentTest.log(Status.FAIL,"Not Entered Cake");
             Reporter.attachScreenshot("failedcake", extentTest, "cake");
 

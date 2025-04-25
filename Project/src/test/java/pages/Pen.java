@@ -232,7 +232,7 @@ public class Pen {
         obj.verifyText(PenLocators.buy,"Add To Cart");
     }catch(Exception e){
         LoggerHandler.error("Not verified");
-        extentTest.error("Not verified");
+        //extentTest.error("Not verified");
         extentTest.log(Status.FAIL,"Not verified");    
     }
     }
